@@ -1,5 +1,5 @@
 const TOKEN = "7956166311:AAH-RgLDYMaC3bjWoyQkfe3dQBKr3mKdSq0"; // Замените на токен вашего бота
-const CHAT_ID = "@adschannelapp_bot"; // Или -100xxxxxxxxxx
+const CHAT_ID = "@CryptoAirdrops678"; // Или -100xxxxxxxxxx
 
 export default async function handler(req, res) {
   const message = `Go to our <b>backup channel</b>\n\nLegal earning schemes only here 👇🏻`;
