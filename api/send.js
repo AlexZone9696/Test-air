@@ -15,9 +15,7 @@ export default async function handler(req, res) {
     ]
   };
 
-  const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
-  const response = await fetch(url, {
+  const response = await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -29,9 +27,9 @@ export default async function handler(req, res) {
   });
 
   if (response.ok) {
-    res.status(200).json({ status: "ok", message: "Message sent" });
+    res.status(200).send("✅ Message sent to Telegram");
   } else {
     const error = await response.text();
-    res.status(500).json({ status: "error", error });
+    res.status(500).send("❌ Error: " + error);
   }
 }
